@@ -4,6 +4,7 @@
 }
 table
 {
+    border-collapse:collapse;
 }
 tr:first-child
 {
@@ -29,12 +30,16 @@ td
 {
     text-align:center;
     width:15px;
+    border:1px solid black;
 }
 th
 {
     width:15px;
+    border-color: #ffff99;
+
 }
 .classy
 {
     background-color: #ffff99;
+    font-weight:bold;
 }
