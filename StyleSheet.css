@@ -1,0 +1,40 @@
+﻿body {
+    min-width:660px;
+    margin:auto;
+}
+table
+{
+}
+tr:first-child
+{
+    background-color:#ffff99;
+    
+}
+th:first-child
+{
+     background-color:#ffff99;
+   
+}
+.empty
+{
+    visibility:hidden;
+}
+
+
+p
+{
+    color:red;
+}
+td
+{
+    text-align:center;
+    width:15px;
+}
+th
+{
+    width:15px;
+}
+.classy
+{
+    background-color: #ffff99;
+}

@@ -5,75 +5,40 @@
     <title>IS445 Homework 5</title>
     <link href="StyleSheet.css" type="text/css" rel="stylesheet" />
 </head>
-    
-    <script>
-        var openPage = prompt('Choose a number between 5 and 20', '');
-        if (openPage==12){
-            prompt = close;
-        }
-        else if (openPage >= 5 && openPage <= 20) {
-            prompt('Wrong Ansewr');
-        }
-        else {
-            prompt('The valid input is a number between 5 and 20, please refresh your page to start again');
-        }
-    </script>
 <body>
     <script>
-        document.write('<table>');
-        document.write('<tr>');
-        document.write('<th class="empty"></th>');
-        document.write('<th>1</th>');
-        document.write('<th>2</th>');
-        document.write('<th>3</th>');
-        document.write('<th>4</th>');
-        document.write('<th>5</th>');
-        document.write('<th>6</th>');
-        document.write('<th>7</th>');
-        document.write('<th>8</th>');
-        document.write('<th>9</th>');
-        document.write('<th>10</th>');
-        document.write('<th>11</th>');
-        document.write('<th>12</th>');
-        document.write('</tr>');
+        var timesTable = prompt('Choose a number between 5 and 20', '');
+        if (timesTable >= 5 && timesTable <= 20) {
+            document.writeln('<table>');
+            
+            for (var hr = 0; hr < timesTable; hr++) {
+                if (hr == 0) {
+                    document.writeln('<th class="empty"></th>');
+                }
+                document.writeln('<th>' + (hr+1) + '</th>');
+            }
+            document.writeln('</tr>');
+            for (var i = 0; i < timesTable; i++) {
+                document.writeln('<tr>');
+                document.writeln('<th>' + (i+1) + '</th>');
+                
+                for (var ii = 0; ii < timesTable; ii++) {
+                    var classy = "";
+                    if (i == ii) {
+                        classy = "classy";
+                    }
+                    document.writeln('<td class="' + classy + '">' + (i+1)* (ii+1) + '</td>');
 
-        document.write('<tr>');
-        document.write('<th>1</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>2</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>3</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>4</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>5</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>6</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>7</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>8</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>9</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>10</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>11</th>');
-        document.write('</tr>');
-        document.write('<tr>');
-        document.write('<th>12</th>');
-        document.write('</tr>');
-        document.write('</table>');
+                }
+                document.writeln('</tr>');
+            }
+
+            document.writeln('</table>');
+        }
+        else {
+            document.writeln('<p>The valid input is a number between 5 and 20, please refresh your page to start again.</P>');
+        }
+       
     </script>
 
 </body>
