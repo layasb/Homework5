@@ -10,7 +10,8 @@
         var timesTable = prompt('Choose a number between 5 and 20', '');
         if (timesTable >= 5 && timesTable <= 20) {
             document.writeln('<table>');
-            
+            document.writeln('<h6>' +"Times Table-" + timesTable + "x" + timesTable + '</h6>');
+
             for (var hr = 0; hr < timesTable; hr++) {
                 if (hr == 0) {
                     document.writeln('<th class="empty"></th>');
